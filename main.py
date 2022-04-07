@@ -95,6 +95,16 @@ def main():
     np.set_printoptions(linewidth=200)  # nice printing of large arrays
     env = gym.make('FrozenLake', desc=["SFFF", "FHFH", "FFFH", "HFFG"],
                    map_name="4x4", is_slippery=True)  # Initialise variables used through script
+    # env = gym.make('FrozenLake', desc=["FSFH", "FFHG", "FFHF", "FFFF"],
+    #                map_name="4x4", is_slippery=False)  # Initialise variables used through script
+    # env = gym.make('FrozenLake', desc=["FSFH", "FFHG", "FFHF", "GFFF"],
+    #                map_name="4x4", is_slippery=True)  # Initialise variables used through script
+    # # env = gym.make('FrozenLake', desc=["SFFH", "FFHF", "FHFF", "FHFG"],
+    #                map_name="4x4", is_slippery=True)  # Initialise variables used through script
+    # env = gym.make('FrozenLake', desc=["SFFFGF", "FHFHHF", "FHFFHF", "FHHFFF", "FFGHFH", "HFFFFF"],
+    #               map_name="6x6", is_slippery=True)  # Initialise variables used through script
+    # env = gym.make('FrozenLake', desc=["SFFFFF", "FHFHHF", "FHFFHF", "FHHFFF", "FFFHFH", "HFFGFF"],
+    #                map_name="6x6", is_slippery=True)  # Initialise variables used through script
     env.reset()
     model = env.env.P
     nb_states = 16  # number of possible states
